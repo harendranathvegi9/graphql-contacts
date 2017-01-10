@@ -1,0 +1,4 @@
+.addressFields {
+    display: flex;
+    flex-direction: row;
+}

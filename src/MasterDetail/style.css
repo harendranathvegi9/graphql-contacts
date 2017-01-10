@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+
+.master {
+  position: relative;
+  flex: 1;
+  padding: 9px;
+  border-right: 1px solid #ddd;
+}
+
+.detail {
+  flex: 3;
+  padding: 9px;
+}
+
+.createContactButton {
+  position: absolute;
+  top: auto;
+  bottom: 18px;
+  right: 18px;
+}
