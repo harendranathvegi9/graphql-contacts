@@ -30,7 +30,7 @@ const mutation = (type, options) => graphql(gql`
     $email: String,
     $phone: String,
     $street: String,
-    $city: String,
+    $city: String!,
     $state: String,
     $zip: String,
     $dob: Date,

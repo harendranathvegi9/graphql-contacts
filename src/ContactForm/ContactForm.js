@@ -25,7 +25,8 @@ const ContactForm = ({id, handleSubmit, saveContact, onCancel}) => {
         <Field component={TextField} floatingLabelText="Street" name="street"
           hintText="Street name" fullWidth={true} style={{flex: 4}}/><br/>
         <Field component={TextField} floatingLabelText="City" name="city"
-          hintText="City or town" fullWidth={true} style={{flex: 2}}/><br/>
+          hintText="City or town" fullWidth={true} style={{flex: 2}}
+          validate={[required]}/><br/>
         <Field component={TextField} floatingLabelText="State" name="state"
           hintText="State or region name" fullWidth={true} style={{flex: 2}}/><br/>
         <Field component={TextField} floatingLabelText="Zip" name="zip"
