@@ -9,8 +9,6 @@ import style from './style.css';
 class MasterDetail extends React.Component {
   @observable selectedContact;
 
-  // TODO: upgrade 'material-ui' lib once
-  // <https://github.com/callemall/material-ui/pull/5884> is merged
   render() {
     const Master = this.props.Master;
     const Detail = (this.selectedContact) ?
