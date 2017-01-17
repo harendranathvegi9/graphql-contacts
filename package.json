@@ -19,7 +19,8 @@
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
     "redux-form": "^6.4.3",
-    "redux-form-material-ui": "^4.1.2"
+    "redux-form-material-ui": "^4.1.2",
+    "validator": "^6.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
