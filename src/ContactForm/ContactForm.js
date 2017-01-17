@@ -7,7 +7,7 @@ import style from './style.css';
 
 const required = value => value ? undefined : 'Required';
 
-const ContactForm = ({id, handleSubmit, saveContact, onCancel}) => {
+const ContactForm = ({id, handleSubmit, saveContact, reset}) => {
   return (
     <form onSubmit={handleSubmit(saveContact)}>
       <Field component={TextField} floatingLabelText="Contact Id" name="id"
@@ -38,7 +38,7 @@ const ContactForm = ({id, handleSubmit, saveContact, onCancel}) => {
         hintText="Any pertinent notes" fullWidth={true}/><br/>
 
       <RaisedButton label="Save" primary={true} type="submit"/>
-      <RaisedButton label="Cancel" secondary={true} onClick={onCancel}/>
+      <RaisedButton label="Cancel" secondary={true} onClick={() => {reset()}}/>
     </form>
   );
 };
