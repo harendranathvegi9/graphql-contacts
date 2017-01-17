@@ -37,8 +37,10 @@ const ContactForm = ({id, handleSubmit, saveContact, reset}) => {
       <Field component={TextField} floatingLabelText="Notes" name="notes"
         hintText="Any pertinent notes" fullWidth={true}/><br/>
 
-      <RaisedButton label="Save" primary={true} type="submit"/>
-      <RaisedButton label="Cancel" secondary={true} onClick={() => {reset()}}/>
+      <RaisedButton label="Save" primary={true} type="submit"
+        className={style.button}/>
+      <RaisedButton label="Cancel" secondary={true} onClick={() => {reset()}}
+        className={style.button}/>
     </form>
   );
 };
