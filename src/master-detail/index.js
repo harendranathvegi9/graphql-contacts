@@ -12,7 +12,7 @@ const UNCHANGED = 3;
 
 @observer
 class MasterDetail extends React.Component {
-  @observable selectedContact;
+  @observable selectedEntity;
   @observable contentState = UNCHANGED;
 
   componentWillUpdate() {
@@ -26,10 +26,11 @@ class MasterDetail extends React.Component {
 
   render() {
     const Master = this.props.Master;
-    const Detail = (this.selectedContact) ?
+    const Detail = (this.selectedEntity) ?
       this.props.UpdateDetail : this.props.CreateDetail;
-    const detailTitle = (this.selectedContact) ?
-      'Edit Contact' : 'Create Contact';
+    const entityName = this.props.entityName;
+    const detailTitle = (this.selectedEntity) ?
+      `Edit ${entityName}` : `Create ${entityName}`;
     const activityText = (this.contentState === UNCHANGED) ? <span/> :
       <Paper className={style.activityText} rounded={ false } zDepth={1}>
         Entity saved
@@ -38,16 +39,16 @@ class MasterDetail extends React.Component {
     return (
       <div className={style.container}>
         <div className={style.master}>
-          <FloatingActionButton className={style.createContactButton}
-            onClick={(e) => {this.selectedContact = undefined}}>
+          <FloatingActionButton className={style.createButton}
+            onClick={(e) => {this.selectedEntity = undefined}}>
             <ContentAdd/>
           </FloatingActionButton>
-          <Master onSelectionChange={cId => {this.selectedContact = cId}}/>
+          <Master onSelectionChange={cId => {this.selectedEntity = cId}}/>
         </div>
         <div className={style.detail}>
           <h2>{detailTitle}</h2>
           {activityText}
-          <Detail id={this.selectedContact}
+          <Detail id={this.selectedEntity}
             onSave={() => {this.contentState = SAVED}}/>
         </div>
       </div>

@@ -32,7 +32,7 @@ ReactDOM.render(
     <MuiThemeProvider>
       <div>
         <AppBar title="GraphQL Contacts" showMenuIconButton={false}/>
-        <MasterDetail Master={ContactsList}
+        <MasterDetail entityName="Contact" Master={ContactsList}
           CreateDetail={CreateContactForm} UpdateDetail={UpdateContactForm}/>
       </div>
     </MuiThemeProvider>
