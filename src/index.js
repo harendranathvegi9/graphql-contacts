@@ -7,9 +7,9 @@ import { ApolloProvider } from 'react-apollo';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
-import MasterDetail from './MasterDetail';
-import ContactsList from './ContactsList';
-import { CreateContactForm, UpdateContactForm } from './ContactForm';
+import MasterDetail from './master-detail';
+import ContactsList from './contacts-list';
+import { CreateContactForm, UpdateContactForm } from './contact-form';
 import './style.css';
 
 injectTapEventPlugin();

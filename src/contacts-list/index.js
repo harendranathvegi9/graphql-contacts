@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
-import ContactsList from './ContactsList';
+import ContactsList from './contacts-list';
 import spinnable from '../utils/spinnable';
 
 const ContactsListHoc = graphql(gql`

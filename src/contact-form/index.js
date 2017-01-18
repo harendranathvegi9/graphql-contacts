@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 import { compose, graphql } from 'react-apollo';
-import ContactForm from './ContactForm';
+import ContactForm from './contact-form';
 import spinnable from '../utils/spinnable';
-import emptyData from '../utils/emptyData';
+import emptyData from '../utils/empty-data';
 
 const readQuery = graphql(gql`
   query ContactQuery($id: String!) {
