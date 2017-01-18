@@ -20,3 +20,13 @@
   bottom: 18px;
   right: 18px;
 }
+
+.activityText {
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* NOTE: `!important` needed because material-ui uses inline styles */
+  background-color: #eeeeee!important;
+}

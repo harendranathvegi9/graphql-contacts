@@ -13,9 +13,13 @@ const email = value => (value && !isEmail(value)) ? 'Invalid email' : undefined;
 const street = value => (value && !value.match(/^[0-9]+ .+$/)) ?
   'The street must be a number followed by a name' : undefined;
 
-const ContactForm = ({id, handleSubmit, saveContact, reset}) => {
+const ContactForm = ({id, handleSubmit, onSave, saveContact, reset}) => {
+  const doSave = (data) => {
+    saveContact(data);
+    onSave();
+  };
   return (
-    <form onSubmit={handleSubmit(saveContact)}>
+    <form onSubmit={handleSubmit(doSave)}>
       <Field component={TextField} floatingLabelText="Contact Id" name="id"
         hintText="Unique identifier" fullWidth={true}
         validate={[required, identifier]} disabled={id !== undefined}/><br/>
